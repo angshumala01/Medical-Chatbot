@@ -69,8 +69,13 @@ def chat():
     msg = request.form.get("msg", "").strip()
     if not msg:
         return "Please enter a message.", 400
-    answer = get_rag_chain().invoke(msg)
-    return answer
+    try:
+        answer = get_rag_chain().invoke(msg)
+        return answer
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return f"ERROR: {type(e).__name__}: {e}", 500
 
 
 if __name__ == "__main__":
