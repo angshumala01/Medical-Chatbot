@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Assistant Chatbot</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Medical Assistant</h2>
+            <p class="subtitle">Powered by GPT-4o &amp; RAG</p>
+        </div>
+
+        <div class="chat-box" id="chatbox">
+            <div class="message bot-message">
+                Hello! I am your Medical Assistant. Ask me anything about medical topics.
+                <br><small><em>Note: I am an AI tool and not a substitute for professional medical advice.</em></small>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Type your medical question..."
+                autocomplete="off"
+            />
+            <button id="sendBtn" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>

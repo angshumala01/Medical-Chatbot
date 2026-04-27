@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Secrets — never commit
+.env
+
+# IDE
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# Vector store artifacts
+*.faiss
+*.pkl
+
+# Logs
+*.log
+
+# Docker
+.dockerignore
+
+# PDFs and data — Pinecone already populated, not needed on Railway
+data/
+*.pdf
+
+# Frontend build artifacts
+frontend/.next/
+frontend/node_modules/
